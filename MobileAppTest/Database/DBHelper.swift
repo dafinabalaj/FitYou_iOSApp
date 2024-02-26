@@ -37,7 +37,7 @@ class DBHelper {
             }
         }
         
-        if sqlite3_open(documentDatabasePath, &databasePointer)== SQLITE_OK{
+        if sqlite3_open(documentDatabasePath, &databasePointer)==SQLITE_OK{
             print("Successfully open database")
             print("Database path: \(documentDatabasePath)")
         }
