@@ -17,6 +17,8 @@
 		DAD4C7652B8CB02500E57E42 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */; };
 		DAD4C7672B8CD80400E57E42 /* MobileAppDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */; };
 		DAD4C7692B8CD86F00E57E42 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */; };
+		DAD4C76E2B8CEF8700E57E42 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C76D2B8CEF8700E57E42 /* LoginRepository.swift */; };
+		DAD4C7702B8CEFA300E57E42 /* SignupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C76F2B8CEFA300E57E42 /* SignupRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MobileAppDatabase.db; sourceTree = "<group>"; };
 		DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		DAD4C76D2B8CEF8700E57E42 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		DAD4C76F2B8CEFA300E57E42 /* SignupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		DA1DC9C02B8C11A100CCD31D /* MobileAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				DAD4C76C2B8CEEFD00E57E42 /* Repository */,
 				DAD4C76A2B8CD88000E57E42 /* Database */,
 				DA1DC9C12B8C11A200CCD31D /* AppDelegate.swift */,
 				DA1DC9C32B8C11A200CCD31D /* SceneDelegate.swift */,
@@ -85,6 +90,15 @@
 				DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		DAD4C76C2B8CEEFD00E57E42 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DAD4C76D2B8CEF8700E57E42 /* LoginRepository.swift */,
+				DAD4C76F2B8CEFA300E57E42 /* SignupRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +176,11 @@
 				DAD4C7652B8CB02500E57E42 /* CreateAccountViewController.swift in Sources */,
 				DAD4C7692B8CD86F00E57E42 /* DBHelper.swift in Sources */,
 				DAD4C7632B8CAA8400E57E42 /* LoginViewController.swift in Sources */,
+				DAD4C76E2B8CEF8700E57E42 /* LoginRepository.swift in Sources */,
 				DA1DC9C62B8C11A200CCD31D /* ViewController.swift in Sources */,
 				DA1DC9C22B8C11A200CCD31D /* AppDelegate.swift in Sources */,
 				DA1DC9C42B8C11A200CCD31D /* SceneDelegate.swift in Sources */,
+				DAD4C7702B8CEFA300E57E42 /* SignupRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
