@@ -15,6 +15,8 @@
 		DA1DC9CE2B8C11A200CCD31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1DC9CC2B8C11A200CCD31D /* LaunchScreen.storyboard */; };
 		DAD4C7632B8CAA8400E57E42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7622B8CAA8400E57E42 /* LoginViewController.swift */; };
 		DAD4C7652B8CB02500E57E42 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */; };
+		DAD4C7672B8CD80400E57E42 /* MobileAppDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */; };
+		DAD4C7692B8CD86F00E57E42 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		DA1DC9CF2B8C11A200CCD31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD4C7622B8CAA8400E57E42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MobileAppDatabase.db; sourceTree = "<group>"; };
+		DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		DA1DC9C02B8C11A100CCD31D /* MobileAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				DAD4C76A2B8CD88000E57E42 /* Database */,
 				DA1DC9C12B8C11A200CCD31D /* AppDelegate.swift */,
 				DA1DC9C32B8C11A200CCD31D /* SceneDelegate.swift */,
 				DA1DC9C52B8C11A200CCD31D /* ViewController.swift */,
@@ -71,6 +76,15 @@
 				DA1DC9CF2B8C11A200CCD31D /* Info.plist */,
 			);
 			path = MobileAppTest;
+			sourceTree = "<group>";
+		};
+		DAD4C76A2B8CD88000E57E42 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */,
+				DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +147,7 @@
 			files = (
 				DA1DC9CE2B8C11A200CCD31D /* LaunchScreen.storyboard in Resources */,
 				DA1DC9CB2B8C11A200CCD31D /* Assets.xcassets in Resources */,
+				DAD4C7672B8CD80400E57E42 /* MobileAppDatabase.db in Resources */,
 				DA1DC9C92B8C11A200CCD31D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD4C7652B8CB02500E57E42 /* CreateAccountViewController.swift in Sources */,
+				DAD4C7692B8CD86F00E57E42 /* DBHelper.swift in Sources */,
 				DAD4C7632B8CAA8400E57E42 /* LoginViewController.swift in Sources */,
 				DA1DC9C62B8C11A200CCD31D /* ViewController.swift in Sources */,
 				DA1DC9C22B8C11A200CCD31D /* AppDelegate.swift in Sources */,
