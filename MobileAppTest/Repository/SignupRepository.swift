@@ -11,20 +11,20 @@ import SQLite3
 
 class SignupRepository{
   
-       static func insertUser(db: OpaquePointer?, username: String, email: String, password: String, salt: String) {
+       static func insertUser(db: OpaquePointer?, username: String, password: String, email: String, salt: String) {
            guard let db = db else {
                print("Database pointer is nil")
                return
            }
 
-           let insertSQL = "INSERT INTO users (username, email, password, salt) VALUES (?, ?, ?, ?)"
+           let insertSQL = "INSERT INTO users (username, password, email, salt) VALUES (?, ?, ?, ?)"
 
            var statement: OpaquePointer? = nil
 
            if sqlite3_prepare_v2(db, insertSQL, -1, &statement, nil) == SQLITE_OK {
                sqlite3_bind_text(statement, 1, username, -1, nil)
-               sqlite3_bind_text(statement, 2, email, -1, nil)
-               sqlite3_bind_text(statement, 3, password, -1, nil)
+               sqlite3_bind_text(statement, 2, password, -1, nil)
+               sqlite3_bind_text(statement, 3, email, -1, nil)
                sqlite3_bind_text(statement, 4, salt, -1, nil)
 
                if sqlite3_step(statement) == SQLITE_DONE {

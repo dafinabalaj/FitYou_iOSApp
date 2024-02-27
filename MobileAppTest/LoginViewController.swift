@@ -22,16 +22,31 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginClicked(_ sender: UIButton) {
         
-    }
-    
-    /*
-    // MARK: - Navigation
+          guard let username = usernameTextField.text, !username.isEmpty else {
+                  showAlert(message: "Please enter your username")
+                  return
+              }
+              
+              guard let password = passwordTextField.text, !password.isEmpty else {
+                  showAlert(message: "Please enter your password")
+                  return
+              }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+              // Assuming you have access to your SQLite database object
+        if LoginRepository.loginUser(db:databasePointer, username: username, enteredPassword: password) {
+                  // Login successful, perform segue or any action you want
+                  showAlert(message: "Login Successful")
+              } else {
+                  // Login failed
+                  showAlert(message: "Invalid username or password")
+              }
+          }
+          
+          func showAlert(message: String) {
+              let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+          }
 }
+
+
