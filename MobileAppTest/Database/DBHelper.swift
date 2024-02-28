@@ -1,33 +1,27 @@
 //
 //  DBHelper.swift
-//  MobileAppTest
+//  TechQuiz
 //
-//  Created by THIS on 26.2.24.
-//  Copyright © 2024 THIS. All rights reserved.
+//  Created by Admin on 19.02.24.
 //
 
 import Foundation
 import SQLite3
 
-class DBHelper {
+
+class DBHelper{
+    
     static func getDatabasePointer(databaseName: String) -> OpaquePointer? {
-        
         var databasePointer: OpaquePointer?
-        
-        
-        let documentDatabasePath = FileManager.default.urls(for: .documentDirectory, in:
-            .userDomainMask)[0].appendingPathComponent(databaseName).path
-        
+        let documentDatabasePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(databaseName).path
+
         if FileManager.default.fileExists(atPath: documentDatabasePath){
-            print("Database Exists (already)")
-        }
-        else {
-            
+            print("Database exists already")
+        }else{
             guard let bundleDatabasePath = Bundle.main.resourceURL?.appendingPathComponent(databaseName).path else{
-                print("Unwrapping Error: Bundle Database Path doesn't exist")
+                print("Unwrapping error: Bundle Database path doesnt exist")
                 return nil
             }
-            
             do{
                 try FileManager.default.copyItem(atPath: bundleDatabasePath, toPath: documentDatabasePath)
                 print("Database created (copied)")
@@ -36,18 +30,20 @@ class DBHelper {
                 return nil
             }
         }
-        
-        if sqlite3_open(documentDatabasePath, &databasePointer)==SQLITE_OK{
-            print("Successfully open database")
+
+        if sqlite3_open(documentDatabasePath, &databasePointer) == SQLITE_OK{
+            print("Successfully opened database")
             print("Database path: \(documentDatabasePath)")
-        }
-        else{
+        }else{
             print("Could not open database")
             
         }
+
         return databasePointer
+
     }
     
+
     static func closeDatabase(dbPointer: OpaquePointer?) {
         guard let db = dbPointer else {
             print("Database pointer is already nil")
@@ -68,4 +64,6 @@ class DBHelper {
                 return databasePath
             }
             return nil
-        }}
+        }
+
+}

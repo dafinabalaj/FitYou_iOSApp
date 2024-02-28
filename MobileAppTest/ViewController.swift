@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    
+    @IBAction func loginAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "loginSegue", sender: self)
+    }
+    
 }
 
