@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
         }
 
         if LoginRepository.loginUser(db: databasePointer, username: username, enteredPassword: password) {
+            UserRepository.fetchUserByUsername(db: databasePointer, username: username)
+
             self.performSegue(withIdentifier: "mainSegue", sender: self)
             showAlert(message: "Login successful!")
             // Navigate to the next view controller upon successful login

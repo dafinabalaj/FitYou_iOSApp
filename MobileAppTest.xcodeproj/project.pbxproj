@@ -14,6 +14,10 @@
 		DA1DC9CB2B8C11A200CCD31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1DC9CA2B8C11A200CCD31D /* Assets.xcassets */; };
 		DA1DC9CE2B8C11A200CCD31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1DC9CC2B8C11A200CCD31D /* LaunchScreen.storyboard */; };
 		DA3C3F8C2B8F9B99002C0FC0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C3F8B2B8F9B99002C0FC0 /* UserModel.swift */; };
+		DA3C3F8E2B8F9E55002C0FC0 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C3F8D2B8F9E55002C0FC0 /* UserRepository.swift */; };
+		DA3C3F912B8FA187002C0FC0 /* OrderTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C3F902B8FA186002C0FC0 /* OrderTableController.swift */; };
+		DA3C3F942B8FA614002C0FC0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C3F932B8FA614002C0FC0 /* TableViewCell.swift */; };
+		DA3C3F962B8FB3B8002C0FC0 /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C3F952B8FB3B8002C0FC0 /* OrderRepository.swift */; };
 		DA8903052B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8903032B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift */; };
 		DA8903062B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8903042B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib */; };
 		DA89030A2B8F4F4D00D6B1A3 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8903092B8F4F4D00D6B1A3 /* DishCategory.swift */; };
@@ -36,7 +40,10 @@
 		DA1DC9CD2B8C11A200CCD31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA1DC9CF2B8C11A200CCD31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA3C3F8B2B8F9B99002C0FC0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		DA8902F12B8E4DE400D6B1A3 /* MobileApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = MobileApp.db; path = ../../../../MobileApp.db; sourceTree = "<group>"; };
+		DA3C3F8D2B8F9E55002C0FC0 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		DA3C3F902B8FA186002C0FC0 /* OrderTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableController.swift; sourceTree = "<group>"; };
+		DA3C3F932B8FA614002C0FC0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DA3C3F952B8FB3B8002C0FC0 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
 		DA8903032B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA8903042B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		DA8903092B8F4F4D00D6B1A3 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
@@ -88,13 +95,20 @@
 				DA1DC9C32B8C11A200CCD31D /* SceneDelegate.swift */,
 				DA1DC9C52B8C11A200CCD31D /* ViewController.swift */,
 				DA1DC9C72B8C11A200CCD31D /* Main.storyboard */,
-				DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */,
-				DAD4C7622B8CAA8400E57E42 /* LoginViewController.swift */,
 				DA1DC9CA2B8C11A200CCD31D /* Assets.xcassets */,
 				DA1DC9CC2B8C11A200CCD31D /* LaunchScreen.storyboard */,
 				DA1DC9CF2B8C11A200CCD31D /* Info.plist */,
 			);
 			path = MobileAppTest;
+			sourceTree = "<group>";
+		};
+		DA3C3F8F2B8FA087002C0FC0 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				DAD4C7622B8CAA8400E57E42 /* LoginViewController.swift */,
+				DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		DA8902F62B8F498F00D6B1A3 /* CustomViews */ = {
@@ -134,7 +148,6 @@
 		DAD4C76A2B8CD88000E57E42 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				DA8902F12B8E4DE400D6B1A3 /* MobileApp.db */,
 				DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */,
 				DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */,
 			);
@@ -146,6 +159,8 @@
 			children = (
 				DAD4C76D2B8CEF8700E57E42 /* LoginRepository.swift */,
 				DAD4C76F2B8CEFA300E57E42 /* SignupRepository.swift */,
+				DA3C3F8D2B8F9E55002C0FC0 /* UserRepository.swift */,
+				DA3C3F952B8FB3B8002C0FC0 /* OrderRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -153,6 +168,7 @@
 		DAD4C7712B8D557D00E57E42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA3C3F8F2B8FA087002C0FC0 /* Users */,
 				DAD4C7722B8D559B00E57E42 /* Home */,
 			);
 			path = Views;
@@ -162,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				DAF144C62B8F646000818BD9 /* HomeViewController.swift */,
+				DA3C3F902B8FA186002C0FC0 /* OrderTableController.swift */,
+				DA3C3F932B8FA614002C0FC0 /* TableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -239,6 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3C3F942B8FA614002C0FC0 /* TableViewCell.swift in Sources */,
+				DA3C3F8E2B8F9E55002C0FC0 /* UserRepository.swift in Sources */,
 				DAD4C7652B8CB02500E57E42 /* CreateAccountViewController.swift in Sources */,
 				DAD4C7692B8CD86F00E57E42 /* DBHelper.swift in Sources */,
 				DAD4C7632B8CAA8400E57E42 /* LoginViewController.swift in Sources */,
@@ -249,6 +269,8 @@
 				DAF144C72B8F646000818BD9 /* HomeViewController.swift in Sources */,
 				DA1DC9C22B8C11A200CCD31D /* AppDelegate.swift in Sources */,
 				DA1DC9C42B8C11A200CCD31D /* SceneDelegate.swift in Sources */,
+				DA3C3F962B8FB3B8002C0FC0 /* OrderRepository.swift in Sources */,
+				DA3C3F912B8FA187002C0FC0 /* OrderTableController.swift in Sources */,
 				DA3C3F8C2B8F9B99002C0FC0 /* UserModel.swift in Sources */,
 				DAD4C7702B8CEFA300E57E42 /* SignupRepository.swift in Sources */,
 			);
