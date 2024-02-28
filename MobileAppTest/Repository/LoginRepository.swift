@@ -5,7 +5,7 @@ import CryptoKit
 class LoginRepository {
     
     static func loginUser(db: OpaquePointer?, username: String, enteredPassword: String) -> Bool {
-        let query = "SELECT password, salt FROM users WHERE username = ?"
+        let query = "SELECT password FROM users WHERE username = ?"
         var statement: OpaquePointer? = nil
         
 
@@ -30,25 +30,19 @@ class LoginRepository {
             return false
         }
         
-        let hashedPasswordFromDB = String(cString: sqlite3_column_text(statement, 0))
-        let saltFromDB = String(cString: sqlite3_column_text(statement, 1))
+        let passwordFromDB = String(cString: sqlite3_column_text(statement, 0))
+        print("Hashed password from DB \(passwordFromDB)")
+                
         
-        if let hashedEnteredPassword = hashPassword(enteredPassword, salt: saltFromDB) {
-            return hashedEnteredPassword == hashedPasswordFromDB
+        if passwordFromDB == enteredPassword {
+            return passwordFromDB == enteredPassword
         } else {
             return false
         }
     }
         
-    private static func hashPassword(_ password: String, salt: String) -> String? {
-        let saltedPassword = password + salt
 
-        if let passwordData = saltedPassword.data(using: .utf8) {
-            let hashed = SHA256.hash(data: passwordData)
-            return hashed.compactMap { String(format: "%02x", $0) }.joined()
-        }
-        return nil
-    }
+
 
 }
 

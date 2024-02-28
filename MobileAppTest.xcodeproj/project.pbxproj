@@ -13,13 +13,17 @@
 		DA1DC9C92B8C11A200CCD31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1DC9C72B8C11A200CCD31D /* Main.storyboard */; };
 		DA1DC9CB2B8C11A200CCD31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1DC9CA2B8C11A200CCD31D /* Assets.xcassets */; };
 		DA1DC9CE2B8C11A200CCD31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1DC9CC2B8C11A200CCD31D /* LaunchScreen.storyboard */; };
+		DA3C3F8C2B8F9B99002C0FC0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C3F8B2B8F9B99002C0FC0 /* UserModel.swift */; };
+		DA8903052B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8903032B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift */; };
+		DA8903062B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8903042B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib */; };
+		DA89030A2B8F4F4D00D6B1A3 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8903092B8F4F4D00D6B1A3 /* DishCategory.swift */; };
 		DAD4C7632B8CAA8400E57E42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7622B8CAA8400E57E42 /* LoginViewController.swift */; };
 		DAD4C7652B8CB02500E57E42 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */; };
 		DAD4C7672B8CD80400E57E42 /* MobileAppDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */; };
 		DAD4C7692B8CD86F00E57E42 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */; };
 		DAD4C76E2B8CEF8700E57E42 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C76D2B8CEF8700E57E42 /* LoginRepository.swift */; };
 		DAD4C7702B8CEFA300E57E42 /* SignupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C76F2B8CEFA300E57E42 /* SignupRepository.swift */; };
-		DAD4C7742B8D560000E57E42 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C7732B8D560000E57E42 /* HomeViewController.swift */; };
+		DAF144C72B8F646000818BD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF144C62B8F646000818BD9 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,14 +35,18 @@
 		DA1DC9CA2B8C11A200CCD31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA1DC9CD2B8C11A200CCD31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA1DC9CF2B8C11A200CCD31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3C3F8B2B8F9B99002C0FC0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DA8902F12B8E4DE400D6B1A3 /* MobileApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = MobileApp.db; path = ../../../../MobileApp.db; sourceTree = "<group>"; };
+		DA8903032B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA8903042B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA8903092B8F4F4D00D6B1A3 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
 		DAD4C7622B8CAA8400E57E42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DAD4C7642B8CB02500E57E42 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		DAD4C7662B8CD80300E57E42 /* MobileAppDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MobileAppDatabase.db; sourceTree = "<group>"; };
 		DAD4C7682B8CD86F00E57E42 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		DAD4C76D2B8CEF8700E57E42 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		DAD4C76F2B8CEFA300E57E42 /* SignupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepository.swift; sourceTree = "<group>"; };
-		DAD4C7732B8D560000E57E42 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DAF144C62B8F646000818BD9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 		DA1DC9C02B8C11A100CCD31D /* MobileAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				DA8903072B8F4F1900D6B1A3 /* Models */,
+				DA8902F62B8F498F00D6B1A3 /* CustomViews */,
 				DAD4C7712B8D557D00E57E42 /* Views */,
 				DAD4C76C2B8CEEFD00E57E42 /* Repository */,
 				DAD4C76A2B8CD88000E57E42 /* Database */,
@@ -85,6 +95,40 @@
 				DA1DC9CF2B8C11A200CCD31D /* Info.plist */,
 			);
 			path = MobileAppTest;
+			sourceTree = "<group>";
+		};
+		DA8902F62B8F498F00D6B1A3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				DA8902F72B8F4B4400D6B1A3 /* CollectionViewCells */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		DA8902F72B8F4B4400D6B1A3 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DA8903022B8F4CAB00D6B1A3 /* CategoryCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		DA8903022B8F4CAB00D6B1A3 /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8903032B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift */,
+				DA8903042B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DA8903072B8F4F1900D6B1A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA8903092B8F4F4D00D6B1A3 /* DishCategory.swift */,
+				DA3C3F8B2B8F9B99002C0FC0 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DAD4C76A2B8CD88000E57E42 /* Database */ = {
@@ -117,7 +161,7 @@
 		DAD4C7722B8D559B00E57E42 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DAD4C7732B8D560000E57E42 /* HomeViewController.swift */,
+				DAF144C62B8F646000818BD9 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1DC9CE2B8C11A200CCD31D /* LaunchScreen.storyboard in Resources */,
+				DA8903062B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.xib in Resources */,
 				DA1DC9CB2B8C11A200CCD31D /* Assets.xcassets in Resources */,
 				DAD4C7672B8CD80400E57E42 /* MobileAppDatabase.db in Resources */,
 				DA1DC9C92B8C11A200CCD31D /* Main.storyboard in Resources */,
@@ -199,9 +244,12 @@
 				DAD4C7632B8CAA8400E57E42 /* LoginViewController.swift in Sources */,
 				DAD4C76E2B8CEF8700E57E42 /* LoginRepository.swift in Sources */,
 				DA1DC9C62B8C11A200CCD31D /* ViewController.swift in Sources */,
-				DAD4C7742B8D560000E57E42 /* HomeViewController.swift in Sources */,
+				DA8903052B8F4CFB00D6B1A3 /* CategoryCollectionViewCell.swift in Sources */,
+				DA89030A2B8F4F4D00D6B1A3 /* DishCategory.swift in Sources */,
+				DAF144C72B8F646000818BD9 /* HomeViewController.swift in Sources */,
 				DA1DC9C22B8C11A200CCD31D /* AppDelegate.swift in Sources */,
 				DA1DC9C42B8C11A200CCD31D /* SceneDelegate.swift in Sources */,
+				DA3C3F8C2B8F9B99002C0FC0 /* UserModel.swift in Sources */,
 				DAD4C7702B8CEFA300E57E42 /* SignupRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

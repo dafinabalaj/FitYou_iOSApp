@@ -71,16 +71,14 @@ class CreateAccountViewController: UIViewController {
         }
 
         // Generate salt
-        let salt = SignupRepository.generateSalt()
+        
 
         // Hash password with salt
-        guard let hashedPassword = SignupRepository.hashPassword(password, salt: salt) else {
-            showAlert(message: "Error hashing password.")
-            return
-        }
+
 
         // Insert user into the database
-        SignupRepository.insertUser(db: databasePointer, username: username, password: hashedPassword, email: email)
+        SignupRepository.insertUser(db: databasePointer, username: username, password: password, email: email)
+        self.performSegue(withIdentifier: "goToLogin", sender: self)
         print("User inserted successfully!")
      
 

@@ -20,5 +20,10 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "loginSegue", sender: self)
     }
     
+    
+    
+    @IBAction func signupAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "signupSegue", sender: self)
+    }
 }
 
