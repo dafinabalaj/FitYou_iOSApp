@@ -16,12 +16,11 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
 
-    // Reference to the database pointer
     var databasePointer: OpaquePointer?
 
  override func viewDidLoad() {
      super.viewDidLoad()
-     // Initialize your databasePointer here
+
      
  }
 
@@ -30,7 +29,7 @@ class CreateAccountViewController: UIViewController {
         let databaseName = "MobileAppDatabase.db"
 
         guard let pointer = DBHelper.getDatabasePointer(databaseName: databaseName) else {
-            // Handle the case where database pointer retrieval fails
+            
             print("Failed to get database pointer.")
             return
         }
@@ -58,25 +57,19 @@ class CreateAccountViewController: UIViewController {
             return
         }
 
-        // Check if username already exists
+        
         if SignupRepository.isUsernameExists(db: databasePointer, username: username) {
             showAlert(message: "Username already exists. Please choose another one.")
             return
         }
 
-        // Check if email already exists
+      
         if SignupRepository.isEmailExists(db: databasePointer, email: email) {
             showAlert(message: "Email already exists. Please use another one.")
             return
         }
 
-        // Generate salt
-        
 
-        // Hash password with salt
-
-
-        // Insert user into the database
         SignupRepository.insertUser(db: databasePointer, username: username, password: password, email: email)
         self.performSegue(withIdentifier: "goToLogin", sender: self)
         print("User inserted successfully!")

@@ -14,44 +14,6 @@ import CryptoKit
 class SignupRepository{
     
 
-    
-//    static func insertUser(db: OpaquePointer?, username: String, password: String, email: String) {
-//
-//             guard let db = db else {
-//                 print("Database pointer is nil")
-//                 return
-//             }
-//
-//             let salt = generateSalt()
-//             guard let hashedPassword = hashPassword(password, salt: salt) else {
-//                 print("Error hashing password")
-//                 return
-//             }
-//
-//             let insertSQL = "INSERT INTO users (username, password, email, salt) VALUES (?, ?, ?, ?)"
-//             var statement: OpaquePointer? = nil
-//
-//             if sqlite3_prepare_v2(db, insertSQL, -1, &statement, nil) == SQLITE_OK {
-//                print(username)
-//                print(email)
-//                print(password)
-//                 sqlite3_bind_text(statement, 1, username, -1, nil)
-//                 sqlite3_bind_text(statement, 2, hashedPassword, -1, nil)
-//                 sqlite3_bind_text(statement, 3, email, -1, nil)
-//                 sqlite3_bind_text(statement, 4, salt, -1, nil)
-//
-//                 if sqlite3_step(statement) == SQLITE_DONE {
-//                     print("Successfully inserted user")
-//                 } else {
-//                     print("Error inserting user")
-//                 }
-//             } else {
-//                 print("Error preparing insert statement")
-//             }
-//
-//             sqlite3_finalize(statement)
-//         }
-
     static func insertUser(db: OpaquePointer?, username: String, password: String, email: String) {
         guard let db = db else {
             print("Database pointer is nil")
@@ -107,7 +69,6 @@ class SignupRepository{
            return false
        }
 
-       //Metoda per validim gjate signup, se a ekziston ndonje email i njejte me ate te cilin deshiron te regjistrohet useri
        static func isEmailExists(db: OpaquePointer?, email: String) -> Bool {
            let query = "SELECT COUNT(*) FROM users WHERE email = ?"
            var statement: OpaquePointer? = nil

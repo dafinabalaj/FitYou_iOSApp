@@ -9,7 +9,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Initialize your databasePointer here
+    
     }
 
     @IBAction func loginClicked(_ sender: UIButton) {
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
 
             self.performSegue(withIdentifier: "mainSegue", sender: self)
             showAlert(message: "Login successful!")
-            // Navigate to the next view controller upon successful login
+            
         } else {
             showAlert(message: "Invalid username or password.")
         }

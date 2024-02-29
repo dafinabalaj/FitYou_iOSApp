@@ -15,7 +15,7 @@ class LoginRepository {
             return false
         }
         
-        //Patjeter duhet te "finalize statement" perndryshe nuk mund te manipulojme me databaze pas login, shfaqe errorin qe eshte locked
+     
         defer {
             sqlite3_finalize(statement)
         }

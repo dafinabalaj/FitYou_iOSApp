@@ -11,7 +11,7 @@ class OrderTableController: UIViewController, UITableViewDataSource, UIPickerVie
     var selectedFood: String?
     
     let foodItems = ["Chicken Burrito", "Chicken Salad", "Gluten Free Toast" , "Vegan Salad" , "Oat Pancakes" , "Vegetarian Burrito" , "Rainbow Pizza" , "Gluten Free Penne" , "Pasta Salad" , "Glazed Salmon" , "Teriyaki Noodles" , "Special Lasagna"]
-    // Assuming UserModel is your user model
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +19,7 @@ class OrderTableController: UIViewController, UITableViewDataSource, UIPickerVie
         pickFood.dataSource = self
         pickFood.delegate = self
         
-        // Assuming user is properly set before viewDidLoad
-        // Example: user = UserModel(id: 1, username: "John", email: "john@example.com")
+       
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +44,7 @@ class OrderTableController: UIViewController, UITableViewDataSource, UIPickerVie
     @IBOutlet weak var pickFood: UIPickerView!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1 // Assuming you only have one column in the UIPickerView
+        return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -93,7 +92,7 @@ class OrderTableController: UIViewController, UITableViewDataSource, UIPickerVie
         
         var paymentMethod: String
         
-        // Determine the payment method based on the segmented control
+      
         if control.selectedSegmentIndex == 0 {
             paymentMethod = "Cash"
         } else {
@@ -110,7 +109,7 @@ class OrderTableController: UIViewController, UITableViewDataSource, UIPickerVie
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            // Navigate back to the HomeViewController
+        
             for viewController in self.navigationController!.viewControllers {
                 if let menuViewController = viewController as? HomeViewController {
                     self.navigationController?.popToViewController(menuViewController, animated: true)
