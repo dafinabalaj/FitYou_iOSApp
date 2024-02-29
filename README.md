@@ -22,24 +22,16 @@ Users can select the dishes they want to order from this page.
 Users are directed to an order view where they can input their information, including delivery details.
 They can then proceed to place the order securely.
 ## Main View
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 24 10__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/2658469d-147b-459c-9bcc-9a61ab2cba2c)
+![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 24 10__](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/5f708a74-723d-4d69-b8ef-06c14dfdb9a3)
 ## Log In & Sign Up
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 26 09__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/5c33ab92-afd9-4d88-a9a2-804c877d15be)
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 26 14__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/aa09d912-b900-4027-b540-e74ec38f56dc)
+![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 26 09__](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/9f45c7f2-771b-40c9-9b56-7f78ac7d7b33)
+![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 26 14](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/66a23150-14c8-44a6-910d-8f5f097b876a)
 ## Home Page - Browse Dishes
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 26 41__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/348ff40e-f028-4b6c-931e-cebee6b68560)
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 26 51__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/e1e28ed9-cc3a-44ed-a035-7fd1d90ff6b9)
+![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 17 46 38](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/ae9dd552-1e8d-4759-b079-ad01ff0f1ca1)
+![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 17 46 45](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/fc8020f5-95db-46d6-826b-00ac6d5c3052)
 ## Order Information and placing orders
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 32 53__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/5c8321fe-2fe0-41e1-80c6-48f93daa4f6d)
-![Simulator Screen Shot - iPhone 11 - 2024-02-29 at 12 32 59__](https://github.com/dafinabalaj/MobileAppTest/assets/121398589/4941f45d-8c41-4a3c-af69-d69995157057)
-
-
-
-
-
-
-
-
+![iparafundit](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/37f7c649-aad3-4935-8a70-ad7c187e3399)
+![ifundit](https://github.com/dafinabalaj/FitYou_iOSApp/assets/121398589/26a99b04-fa66-4318-89a1-8b88f3420675)
 
 
 
