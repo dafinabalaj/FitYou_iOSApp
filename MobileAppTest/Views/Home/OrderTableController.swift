@@ -109,8 +109,17 @@ class OrderTableController: UIViewController, UITableViewDataSource, UIPickerVie
     
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            // Navigate back to the HomeViewController
+            for viewController in self.navigationController!.viewControllers {
+                if let menuViewController = viewController as? HomeViewController {
+                    self.navigationController?.popToViewController(menuViewController, animated: true)
+                    break
+                }
+            }
+        }
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
+    
 }
