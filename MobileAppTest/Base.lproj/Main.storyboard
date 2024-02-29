@@ -593,7 +593,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="190-Wr-rth">
-                                <rect key="frame" x="117" y="745" width="180" height="30"/>
+                                <rect key="frame" x="110" y="793" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Finish Order">
@@ -621,6 +621,24 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kHX-KV-1Li">
+                                <rect key="frame" x="150" y="739" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Cash"/>
+                                    <segment title="Card"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="deD-DX-WqL" eventType="valueChanged" id="Ytk-ba-cd9"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Method:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHM-Vk-Ubm">
+                                <rect key="frame" x="123" y="695" width="154" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86066859959999997" green="0.94735270739999999" blue="0.8313410282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="z9Z-aF-Mob"/>
@@ -628,6 +646,7 @@
                     <navigationItem key="navigationItem" title="Order" id="nMO-K1-jVd"/>
                     <connections>
                         <outlet property="adresaField" destination="gRm-zC-Jf5" id="K6i-72-KAv"/>
+                        <outlet property="control" destination="kHX-KV-1Li" id="4ah-cv-qje"/>
                         <outlet property="pickFood" destination="p9X-RZ-2p5" id="7Oa-RT-e52"/>
                         <outlet property="tableView" destination="m1R-SA-0OR" id="h5F-6D-BaC"/>
                         <outlet property="telefoniField" destination="ini-cG-CXw" id="yiP-lJ-8hs"/>

@@ -11,25 +11,30 @@ import SQLite3
 
 class OrderRepository{
     
-    static func insertOrder(db: OpaquePointer?, username: String, address: String, number: String, food: String) {
+    static func insertOrder(db: OpaquePointer?, username: String, address: String, number: String, food: String, paymentMethod: String) {
            guard let db = db else {
                print("Database pointer is nil")
                return
            }
 
-           let insertSQL = "INSERT INTO orders (username, address, number, food) VALUES (?, ?, ?, ?)"
+           let insertSQL = "INSERT INTO orders (username, address, number, food, payment_method) VALUES (?, ?, ?, ?, ?)"
            var statement: OpaquePointer? = nil
+               
+            
 
            if sqlite3_prepare_v2(db, insertSQL, -1, &statement, nil) == SQLITE_OK {
                let cStringUsername = username.cString(using: .utf8)
                let cStringAddress = address.cString(using: .utf8)
                let cStringNumber = number.cString(using: .utf8)
                let cStringFood = food.cString(using: .utf8)
+               let cStringPaymentMethod = paymentMethod.cString(using: .utf8)
+            
                
                sqlite3_bind_text(statement, 1, cStringUsername, -1, nil)
                sqlite3_bind_text(statement, 2, cStringAddress, -1, nil)
                sqlite3_bind_text(statement, 3, cStringNumber, -1, nil)
                sqlite3_bind_text(statement, 4, cStringFood, -1, nil)
+               sqlite3_bind_text(statement, 5, cStringPaymentMethod, -1, nil)
 
                if sqlite3_step(statement) == SQLITE_DONE {
                    print("Successfully inserted order")
